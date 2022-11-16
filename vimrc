@@ -148,6 +148,9 @@ noremap <C-Alt-L> :Prettier<CR>
 
 call plug#begin('~/.vim/plugged')
 
+Plug 'gcmt/wildfire.vim'
+Plug 'tpope/vim-surround'
+Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 Plug 'vim-airline/vim-airline'
 Plug 'mattn/emmet-vim'
 Plug 'preservim/nerdtree'
