@@ -126,11 +126,11 @@ map tn :-tabnext<CR>
 map tN :+tabnext<CR>
 
 " ===
-" === ultisnips
+" === UltiSnips
 " ===
 let g:ultisnipsexpandtrigger="<c-e>"
-let g:ultisnipsjumpforwardtrigger="<c-e>"
-let g:ultisnipsjumpbackwardtrigger="<c-n>"
+let g:ultisnipsjumpforwardtrigger="<c-j>"
+let g:ultisnipsjumpbackwardtrigger="<c-k>"
 let g:ultisnipseditsplit="vertical"
 
 " ===
