@@ -126,23 +126,23 @@ map tn :-tabnext<CR>
 map tN :+tabnext<CR>
 
 " ===
-" === UltiSnips
+" === ultisnips
 " ===
-let g:UltiSnipsExpandTrigger="<c-e>"
-let g:UltiSnipsJumpForwardTrigger="<c-e>"
-let g:UltiSnipsJumpBackwardTrigger="<c-n>"
-let g:UltiSnipsEditSplit="vertical"
+let g:ultisnipsexpandtrigger="<c-e>"
+let g:ultisnipsjumpforwardtrigger="<c-e>"
+let g:ultisnipsjumpbackwardtrigger="<c-n>"
+let g:ultisnipseditsplit="vertical"
 
 " ===
 " === NERDTree
 " ===
 map tt :NERDTree<CR>
-let NERDTreeMapOpenExpl = ""
-let NERDTreeMapUpdir = ""
-let NERDTreeMapUpdirKeepOpen = "l"
-let NERDTreeMapOpenSplit = ""
-let NERDTreeOpenVSplit = ""
-let NERDTreeMapActivateNode = "i"
+let nerdtreemapopenexpl = ""
+let nerdtreemapupdir = ""
+let nerdtreemapupdirkeepopen = "l"
+let nerdtreemapopensplit = ""
+let nerdtreeopenvsplit = ""
+let nerdtreemapactivatenode = "i"
 let NERDTreeMapOpenInTab = "o"
 let NERDTreeMapPreview = ""
 let NERDTreeMapCloseDir = "n"
@@ -165,12 +165,22 @@ inoremap <expr><S-TAB> coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
 noremap <C-Alt-L> :Prettier<CR>
 
+" ===
+" === vim-airline
+" ===
+let g:airline#extensions#tabline#enabled = 1
+let g:airline_theme='badwolf'
+
+" ===
+" === vim-plug
+" ===
 call plug#begin('~/.vim/plugged')
 
 Plug 'gcmt/wildfire.vim'
 Plug 'tpope/vim-surround'
 Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 Plug 'mattn/emmet-vim'
 Plug 'preservim/nerdtree'
 Plug 'posva/vim-vue'
