@@ -118,12 +118,24 @@ map <down> :res -5<CR>
 map <left> :vertical resize+5<CR>
 map <right> :vertical resize-5<CR>
 
-""" open a new tag
+" ===
+" === open a new tag
+" ===
 map tu :tabe<CR>
 map tn :-tabnext<CR>
 map tN :+tabnext<CR>
 
-""" open NEARDTree
+" ===
+" === UltiSnips
+" ===
+let g:UltiSnipsExpandTrigger="<c-e>"
+let g:UltiSnipsJumpForwardTrigger="<c-j>"
+let g:UltiSnipsJumpBackwardTrigger="<c-k>"
+let g:UltiSnipsEditSplit="vertical"
+
+" ===
+" === NERDTree
+" ===
 map tt :NERDTree<CR>
 let NERDTreeMapOpenExpl = ""
 let NERDTreeMapUpdir = ""
@@ -136,12 +148,19 @@ let NERDTreeMapPreview = ""
 let NERDTreeMapCloseDir = "n"
 let NERDTreeMapChangeRoot = "y"
 
-""" vim-table-mode
+" ===
+" === vim-table-mode
+" ===
 map <LEADER>tm :TableModeToggle<CR>
 
-"""coc_nvim
-inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
-inoremap <expr> <S-Tab> pumvisible() ? "\<C-n>" : "\<S-Tab>"
+" ===
+" === coc_nvim
+" ===
+inoremap <silent><expr> <TAB>
+      \ coc#pum#visible() ? coc#pum#next(1) :
+      \ CheckBackspace() ? "\<Tab>" :
+      \ coc#refresh()
+inoremap <expr><S-TAB> coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"
 " Use <Ctrl-Alt-L> to format documents with prettier
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
 noremap <C-Alt-L> :Prettier<CR>
@@ -161,5 +180,7 @@ Plug 'mbbill/undotree'
 Plug 'dhruvasagar/vim-table-mode'
 Plug 'morhetz/gruvbox'
 Plug 'neoclide/coc.nvim', {'branch':'release'}
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
 
 call plug#end()
