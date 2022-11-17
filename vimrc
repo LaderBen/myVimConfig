@@ -129,8 +129,8 @@ map tN :+tabnext<CR>
 " === UltiSnips
 " ===
 let g:UltiSnipsExpandTrigger="<c-e>"
-let g:UltiSnipsJumpForwardTrigger="<c-j>"
-let g:UltiSnipsJumpBackwardTrigger="<c-k>"
+let g:UltiSnipsJumpForwardTrigger="<c-e>"
+let g:UltiSnipsJumpBackwardTrigger="<c-n>"
 let g:UltiSnipsEditSplit="vertical"
 
 " ===
